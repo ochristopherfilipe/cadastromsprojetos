@@ -17,7 +17,7 @@ if(isset($_POST['submit'])) {
     $descricao_servicos = $_POST['descricao_servicos'];
     $tipo_servico = $_POST['tipo_servico'];
 
-    // Enviar e-mail para o endereço profissional
+    // Envie um e-mail para o endereço profissional
     enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servico);
 
     echo ("<script>alert('Dados Enviados Com Sucesso!')</script>");
@@ -61,3 +61,64 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale conosco</title>
+    <subtitle>Faça um orçamento sem compromisso</subtitle>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="" method="post">
+                <fieldset>
+                    <legend><b>Solicitação de Serviços</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <textarea name="descricao_servicos" id="descricao_servicos" class="inputUser" rows="6" required></textarea>
+                        <label for="descricao_servicos" class="labelInput">Breve descrição dos serviços que você precisa:</label>
+                    </div>
+                    <br><br>
+
+                    <!-- Campo selecionável -->
+                    <div class="inputBox">
+                        <label for="tipo_servico" class="labelInput">Projetos, Laudos e Estudos Ambientais (tipo selecionável)</label>
+                        <select name="tipo_servico" id="tipo_servico" class="inputUser" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="Assessoria e Consultoria Ambiental">Assessoria e Consultoria Ambiental</option>
+                            <option value="Desenvolvimento de Diagnóstico Socioambiental">Desenvolvimento de Diagnóstico Socioambiental</option>
+                        </select>
+                    </div>
+                    <br><br>
+
+                    <input type="submit" name="submit" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
