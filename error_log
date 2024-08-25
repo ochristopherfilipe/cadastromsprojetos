@@ -1,0 +1,82 @@
+[29-Nov-2023 17:50:32 America/Fortaleza] PHP Warning:  require(phpmailer/phpmailer.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 3
+[29-Nov-2023 17:50:32 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'phpmailer/phpmailer.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 3
+[29-Nov-2023 18:35:06 America/Fortaleza] PHP Warning:  require(../vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 7
+[29-Nov-2023 18:35:06 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required '../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 7
+[29-Nov-2023 18:35:11 America/Fortaleza] PHP Warning:  require(../vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 7
+[29-Nov-2023 18:35:11 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required '../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 7
+[01-Dec-2023 12:37:49 America/Fortaleza] PHP Fatal error:  Uncaught Error: Class "PHPMailer\PHPMailer\PHPMailer" not found in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:32
+Stack trace:
+#0 /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php(24): enviarEmail('Christopher San...', 'chrisdynamus@gm...', '92999961672', 'masculino', '2023-12-05', 'Manaus', 'AM', 'teste 1')
+#1 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 32
+[01-Dec-2023 12:41:34 America/Fortaleza] PHP Fatal error:  Uncaught Error: Class "PHPMailer\PHPMailer\PHPMailer" not found in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:39
+Stack trace:
+#0 /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php(31): enviarEmail('Christopher San...', 'chrisdynamus@gm...', '92999961672', 'masculino', '2023-12-27', 'Manaus', 'AM', 'teste 2')
+#1 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 39
+[01-Dec-2023 12:42:36 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:36 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:37 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:37 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:40 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:40 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:42 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:42 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:44 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:42:44 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:43:11 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:43:11 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:45:17 America/Fortaleza] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:45:17 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 2
+[01-Dec-2023 12:52:04 America/Fortaleza] PHP Warning:  require_once(/home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/composer/autoload_real.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/autoload.php on line 23
+[01-Dec-2023 12:52:04 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/autoload.php:23
+Stack trace:
+#0 /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php(2): require()
+#1 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/autoload.php on line 23
+[01-Dec-2023 12:52:40 America/Fortaleza] PHP Warning:  require_once(/home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/composer/autoload_real.php): Failed to open stream: No such file or directory in /home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/autoload.php on line 23
+[01-Dec-2023 12:52:40 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required '/home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/composer/autoload_real.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/autoload.php:23
+Stack trace:
+#0 /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php(2): require()
+#1 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/vendor/autoload.php on line 23
+[01-Dec-2023 12:54:48 America/Fortaleza] PHP Fatal error:  Uncaught Error: Class "PHPMailer\PHPMailer\PHPMailer" not found in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:46
+Stack trace:
+#0 /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php(38): enviarEmail('Christopher San...', 'chrisdynamus@gm...', '92999961672', 'masculino', '2023-12-20', 'Manaus', 'AM', 'teste 5 compose...')
+#1 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 46
+[01-Dec-2023 13:02:24 America/Fortaleza] PHP Fatal error:  Uncaught Error: Class "PHPMailer\PHPMailer\PHPMailer" not found in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php:46
+Stack trace:
+#0 /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php(38): enviarEmail('Christopher San...', 'chrisdynamus@gm...', '92999961672', 'masculino', '2023-12-27', 'Manaus', 'AM', 'teste 6')
+#1 {main}
+  thrown in /home4/msproj32/cadastro.msprojetosambientais.com.br/index.php on line 46
