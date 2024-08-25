@@ -39,7 +39,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
     $mail->CharSet    = "utf8";
 
     // Destinatário do e-mail
-    $mail->setFrom('Maria@cadastro.msprojetosambientais.com.br', 'Cadastro MSPA');
+    $mail->setFrom('Maria@cadastro.msprojetosambientais.com.br', 'SOLICITAÇÃO DE ORÇAMENTO');
     $mail->addAddress('maria.fsnery@gmail.com', 'Maria');
     $mail->addAddress('ms.pjambientais@gmail.com', 'MS Projetos Ambientais');
     $mail->addAddress('ochristopherfilipe@gmail.com', 'Christopher');
@@ -48,13 +48,13 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
     $mail->isHTML(true);
     $mail->Subject = 'Nova solicitação de serviço';
     $mail->Body = "
-        <h2>Nova solicitação de serviços no site MSprojetosambientais:</h2>
+        <h2>Nova Solicitação de Serviços no Site:</h2>
         <p><strong>Nome:</strong> $nome</p>
         <p><strong>E-mail:</strong> $email</p>
         <p><strong>Telefone:</strong> $telefone</p>
-        <p><strong>Descrição dos Serviços:</strong> $descricao_servicos</p>
-        <p><strong>Tipo de Serviço:</strong> $tipo_servico</p>
-        <p><strong>Mensagem:</strong> $mensagem</p>";
+        <p><strong>Breve Descrição dos Serviços:</strong> $descricao_servicos</p>
+        <p><strong>Serviço(s):</strong> $tipo_servico</p>
+        <p><strong>Mensagem Adicional:</strong> $mensagem</p>";
 
     // Enviar e-mail
     try {
