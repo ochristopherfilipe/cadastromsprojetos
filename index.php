@@ -59,9 +59,14 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
     // Enviar e-mail
     try {
         $mail->send();
-        echo 'E-mail enviado com sucesso!';
+        echo "<script>
+                alert('E-mail enviado com sucesso!');
+                window.location.href = 'https://msprojetosambientais.com.br/';
+              </script>";
     } catch (Exception $e) {
-        echo "Erro no envio do e-mail: {$mail->ErrorInfo}";
+        echo "<script>
+                alert('Erro no envio do e-mail: {$mail->ErrorInfo}');
+              </script>";
     }
 }
 ?>
@@ -88,7 +93,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                     <br>
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" required>
-                        <label for="nome" class="labelInput">Nome completo</label>
+                        <label for="nome" class="labelInput">Nome ou Nome da Empresa</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
