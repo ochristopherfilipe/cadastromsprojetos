@@ -60,7 +60,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
     try {
         $mail->send();
         echo "<script>
-                alert('E-mail enviado com sucesso!');
+                alert('Sua solicitação foi enviada com sucesso! Entraremos em contato em breve!');
                 window.location.href = 'https://msprojetosambientais.com.br/';
               </script>";
     } catch (Exception $e) {
@@ -107,7 +107,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <textarea name="descricao_servicos" id="descricao_servicos" class="inputUser" rows="6" required></textarea>
+                        <textarea name="descricao_servicos" id="descricao_servicos" class="inputUser" rows="6"></textarea>
                         <label for="descricao_servicos" class="labelInput">Breve descrição dos serviços que você precisa:</label>
                     </div>
                     <br><br>
@@ -142,17 +142,14 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                                 <input type="checkbox" name="tipo_servico[]" value="Declaração de Inexigibilidade"> Declaração de Inexigibilidade<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Licenciamento Ambiental (Municipal, Estadual e Federal)"> Licenciamento Ambiental (Municipal, Estadual e Federal)<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Licença Ambiental Simplificada – LAS"> Licença Ambiental Simplificada – LAS<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Licença Prévia, Instalação e Operação"> Licença Prévia, Instalação e Operação<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Autorização Ambiental"> Autorização Ambiental<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Regularização Ambiental de Empreendimentos"> Regularização Ambiental de Empreendimentos<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Regularização Ambiental de Pequenas Propriedades"> Regularização Ambiental de Pequenas Propriedades<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Dispensa de Licenciamento"> Dispensa de Licenciamento<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Cadastro Técnico Federal"> Cadastro Técnico Federal<br>
-                                <input type="checkbox" name="tipo_servico[]" value="CADRI - Certificado de Movimentação de Resíduos de Interesse Ambiental"> CADRI - Certificado de Movimentação de Resíduos de Interesse Ambiental<br>
-                                <input type="checkbox" name="tipo_servico[]" value="CETESB - Companhia Ambiental do Estado de São Paulo"> CETESB - Companhia Ambiental do Estado de São Paulo<br>
-                                <input type="checkbox" name="tipo_servico[]" value="ICMBIO - Instituto Chico Mendes de Conservação da Biodiversidade"> ICMBIO - Instituto Chico Mendes de Conservação da Biodiversidade<br>
-                                <input type="checkbox" name="tipo_servico[]" value="TCA - Termo de Compromisso Ambiental"> TCA - Termo de Compromisso Ambiental<br>
-                                <input type="checkbox" name="tipo_servico[]" value="Documentos e Laudos de Menor Impacto"> Documentos e Laudos de Menor Impacto<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Licença Ambiental Única – LAU"> Licença Ambiental Única – LAU<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Corte de Árvores Isoladas - CAI"> Corte de Árvores Isoladas - CAI<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Outorga de uso de Recursos Hídricos (Água Superficial ou Subterrânea)"> Outorga de uso de Recursos Hídricos (Água Superficial ou Subterrânea)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Outorga para Lançamento de Efluentes"> Outorga para Lançamento de Efluentes<br>
+                                <input type="checkbox" name="tipo_servico[]" value="AUMPF (Autorização de Uso da Matéria Prima Florestal)"> AUMPF (Autorização de Uso da Matéria Prima Florestal)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="DOF (Documento de Origem Florestal)"> DOF (Documento de Origem Florestal)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Manejo Florestal de Maior Impacto"> Plano de Manejo Florestal de Maior Impacto<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Manejo Florestal de Menor Impacto"> Plano de Manejo Florestal de Menor Impacto<br>
                                 <input type="checkbox" name="tipo_servico[]" value="CAR (Cadastro Ambiental Rural)"> CAR (Cadastro Ambiental Rural)<br>
                             </fieldset>
                             <fieldset>
@@ -178,7 +175,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                     <br><br>
                     <div class="inputBox">
                         <textarea name="mensagem" id="mensagem" class="inputUser" rows="4"></textarea>
-                        <label for="mensagem" class="labelInput">Deixe uma mensagem:</label>
+                        <label for="mensagem" class="labelInput">Adicione uma observação ou deixa uma mensagem:</label>
                     </div>
                     <br><br>
                     <input type="submit" name="submit" id="submit" value="Enviar">
