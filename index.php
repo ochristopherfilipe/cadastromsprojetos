@@ -84,7 +84,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
             <img src="logo.png" alt="Logo" class="logo">
             <form action="index.php" method="post">
                 <fieldset>
-                    <legend><b>Solicitação de Serviços</b></legend>
+                    <h3><b>Solicitação de Serviços</b></h3>
                     <br>
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" required>
@@ -111,7 +111,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                         <label for="tipo_servico" class="labelInput">Tipo de Serviço</label>
                         <div id="tipo_servico" class="inputUser">
                             <fieldset>
-                                <legend>Projetos, Laudos e Estudos Ambientais</legend>
+                                <h3>Projetos, Laudos e Estudos Ambientais</h3>
                                 <input type="checkbox" name="tipo_servico[]" value="Assessoria e Consultoria Ambiental"> Assessoria e Consultoria Ambiental<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Desenvolvimento de Diagnóstico Socioambiental"> Desenvolvimento de Diagnóstico Socioambiental<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Educação Ambiental"> Educação Ambiental<br>
@@ -133,7 +133,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                                 <input type="checkbox" name="tipo_servico[]" value="Plano de Atendimento a Emergência - PAE"> Plano de Atendimento a Emergência - PAE<br>
                             </fieldset>
                             <fieldset>
-                                <legend>Licenciamento e Autorizações Ambientais</legend>
+                                <h3>Licenciamento e Autorizações Ambientais</h3>
                                 <input type="checkbox" name="tipo_servico[]" value="Declaração de Inexigibilidade"> Declaração de Inexigibilidade<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Licenciamento Ambiental (Municipal, Estadual e Federal)"> Licenciamento Ambiental (Municipal, Estadual e Federal)<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Licença Ambiental Simplificada – LAS"> Licença Ambiental Simplificada – LAS<br>
@@ -151,7 +151,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                                 <input type="checkbox" name="tipo_servico[]" value="CAR (Cadastro Ambiental Rural)"> CAR (Cadastro Ambiental Rural)<br>
                             </fieldset>
                             <fieldset>
-                                <legend>Gestão Ambiental</legend>
+                                <h3>Gestão Ambiental</h3>
                                 <input type="checkbox" name="tipo_servico[]" value="Plano de Gestão Ambiental – PGA"> Plano de Gestão Ambiental – PGA<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Compensação Ambiental"> Compensação Ambiental<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Gestão Ambiental"> Gestão Ambiental<br>
@@ -161,7 +161,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                                 <input type="checkbox" name="tipo_servico[]" value="Recuperação de Áreas Degradadas"> Recuperação de Áreas Degradadas<br>
                             </fieldset>
                             <fieldset>
-                                <legend>Outros Serviços</legend>
+                                <h3>Outros Serviços</h3>
                                 <input type="checkbox" name="tipo_servico[]" value="Geoprocessamento"> Geoprocessamento<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Supressão Vegetal"> Supressão Vegetal<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Acompanhamento de Supressão Vegetal"> Acompanhamento de Supressão Vegetal<br>
