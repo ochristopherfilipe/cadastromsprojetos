@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $descricao_servicos = $_POST['descricao_servicos'];
-    $tipo_servico = $_POST['tipo_servico'];
+    $tipo_servico = implode(", ", $_POST['tipo_servico']);
     $mensagem = $_POST['mensagem'];
 
     // Envie um e-mail para o endereço profissional
@@ -47,13 +47,14 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
     // Conteúdo do e-mail
     $mail->isHTML(true);
     $mail->Subject = 'Nova solicitação de serviço';
-    $mail->Body = "Nova solicitação de serviços no site MSprojetosambientais:<br><br>"
-        . "Nome: $nome<br>"
-        . "E-mail: $email<br>"
-        . "Telefone: $telefone<br>"
-        . "Descrição dos Serviços: $descricao_servicos<br>"
-        . "Tipo de Serviço: $tipo_servico<br>"
-        . "Mensagem: $mensagem<br>";
+    $mail->Body = "
+        <h2>Nova solicitação de serviços no site MSprojetosambientais:</h2>
+        <p><strong>Nome:</strong> $nome</p>
+        <p><strong>E-mail:</strong> $email</p>
+        <p><strong>Telefone:</strong> $telefone</p>
+        <p><strong>Descrição dos Serviços:</strong> $descricao_servicos</p>
+        <p><strong>Tipo de Serviço:</strong> $tipo_servico</p>
+        <p><strong>Mensagem:</strong> $mensagem</p>";
 
     // Enviar e-mail
     try {
@@ -108,59 +109,66 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
 
                     <div class="inputBox">
                         <label for="tipo_servico" class="labelInput">Tipo de Serviço</label>
-                        <select name="tipo_servico" id="tipo_servico" class="inputUser" required>
-                            <optgroup label="Projetos, Laudos e Estudos Ambientais">
-                                <option value="Assessoria e Consultoria Ambiental">Assessoria e Consultoria Ambiental</option>
-                                <option value="Desenvolvimento de Diagnóstico Socioambiental">Desenvolvimento de Diagnóstico Socioambiental</option>
-                                <option value="Educação Ambiental">Educação Ambiental</option>
-                                <option value="Elaboração, implantação e acompanhamento de projetos e Laudos Ambientais">Elaboração, implantação e acompanhamento de projetos e Laudos Ambientais</option>
-                                <option value="Estudos e Gestão de Áreas Protegidas">Estudos e Gestão de Áreas Protegidas</option>
-                                <option value="Estudo de Impacto de Vizinhança (EIV)">Estudo de Impacto de Vizinhança (EIV)</option>
-                                <option value="Estudo e Relatório de Impacto Ambiental – (EIA/RIMA)">Estudo e Relatório de Impacto Ambiental – (EIA/RIMA)</option>
-                                <option value="Levantamento de Aspectos e Impactos Ambientais (LAIA)">Levantamento de Aspectos e Impactos Ambientais (LAIA)</option>
-                                <option value="Plano de Gerenciamento de Resíduos Sólidos - PGRS">Plano de Gerenciamento de Resíduos Sólidos - PGRS</option>
-                                <option value="Plano de Controle Ambiental (PCA)">Plano de Controle Ambiental (PCA)</option>
-                                <option value="Programa de Política Ambiental">Programa de Política Ambiental</option>
-                                <option value="Relatório de Atividades Potencialmente Poluidoras (RAPP)">Relatório de Atividades Potencialmente Poluidoras (RAPP)</option>
-                                <option value="Relatório de Controle Ambiental (RCA)">Relatório de Controle Ambiental (RCA)</option>
-                                <option value="Inventário Florestal">Inventário Florestal</option>
-                                <option value="Inventário de Fauna Silvestre">Inventário de Fauna Silvestre</option>
-                                <option value="Plano de Resgate de Fauna Silvestre">Plano de Resgate de Fauna Silvestre</option>
-                                <option value="Resgate e Afugentamento de Fauna Silvestre">Resgate e Afugentamento de Fauna Silvestre</option>
-                                <option value="Plano de Recuperação de Áreas Degradadas - PRAD">Plano de Recuperação de Áreas Degradadas - PRAD</option>
-                                <option value="Plano de Atendimento a Emergência - PAE">Plano de Atendimento a Emergência - PAE</option>
-                            </optgroup>
-                            <optgroup label="Licenciamento e Autorizações Ambientais">
-                                <option value="Declaração de Inexigibilidade">Declaração de Inexigibilidade</option>
-                                <option value="Licenciamento Ambiental (Municipal, Estadual e Federal)">Licenciamento Ambiental (Municipal, Estadual e Federal)</option>
-                                <option value="Licença Ambiental Simplificada – LAS">Licença Ambiental Simplificada – LAS</option>
-                                <option value="Licença Ambiental Única – LAU">Licença Ambiental Única – LAU</option>
-                                <option value="Corte de Árvores Isoladas - CAI">Corte de Árvores Isoladas - CAI</option>
-                                <option value="Outorga de uso de Recursos Hídricos (Água Superficial ou Subterrânea)">Outorga de uso de Recursos Hídricos (Água Superficial ou Subterrânea)</option>
-                                <option value="Outorga para Lançamento de Efluentes">Outorga para Lançamento de Efluentes</option>
-                                <option value="AUMPF (Autorização de Uso da Matéria Prima Florestal)">AUMPF (Autorização de Uso da Matéria Prima Florestal)</option>
-                                <option value="DOF (Documento de Origem Florestal)">DOF (Documento de Origem Florestal)</option>
-                                <option value="Plano de Manejo Florestal de Maior Impacto">Plano de Manejo Florestal de Maior Impacto</option>
-                                <option value="Plano de Manejo Florestal de Menor Impacto">Plano de Manejo Florestal de Menor Impacto</option>
-                                <option value="CAR (Cadastro Ambiental Rural)">CAR (Cadastro Ambiental Rural)</option>
-                            </optgroup>
-                            <optgroup label="Gestão Ambiental">
-                                <option value="Plano de Gestão Ambiental – PGA">Plano de Gestão Ambiental – PGA</option>
-                                <option value="Compensação Ambiental">Compensação Ambiental</option>
-                                <option value="Gestão Ambiental">Gestão Ambiental</option>
-                                <option value="Monitoramento Ambiental">Monitoramento Ambiental</option>
-                                <option value="Programa de Monitoramento de Fauna Silvestre - PMFS">Programa de Monitoramento de Fauna Silvestre - PMFS</option>
-                                <option value="Programa de Afugentamento, Resgate e Destinação de Fauna Silvestre - PSRDS">Programa de Afugentamento, Resgate e Destinação de Fauna Silvestre - PSRDS</option>
-                                <option value="Recuperação de Áreas Degradadas">Recuperação de Áreas Degradadas</option>
-                            </optgroup>
-                            <optgroup label="Outros Serviços">
-                                <option value="Geoprocessamento">Geoprocessamento</option>
-                                <option value="Supressão Vegetal">Supressão Vegetal</option>
-                                <option value="Acompanhamento de Supressão Vegetal">Acompanhamento de Supressão Vegetal</option>
-                                <option value="Intervenção em APP (Área de Preservação Permanente)">Intervenção em APP (Área de Preservação Permanente)</option>
-                                <option value="Plantio de mudas">Plantio de mudas</option>
-                            </optgroup>
-                        </select>
+                        <div id="tipo_servico" class="inputUser">
+                            <fieldset>
+                                <legend>Projetos, Laudos e Estudos Ambientais</legend>
+                                <input type="checkbox" name="tipo_servico[]" value="Assessoria e Consultoria Ambiental"> Assessoria e Consultoria Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Desenvolvimento de Diagnóstico Socioambiental"> Desenvolvimento de Diagnóstico Socioambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Educação Ambiental"> Educação Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Elaboração, implantação e acompanhamento de projetos e Laudos Ambientais"> Elaboração, implantação e acompanhamento de projetos e Laudos Ambientais<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Estudos e Gestão de Áreas Protegidas"> Estudos e Gestão de Áreas Protegidas<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Estudo de Impacto de Vizinhança (EIV)"> Estudo de Impacto de Vizinhança (EIV)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Estudo e Relatório de Impacto Ambiental – (EIA/RIMA)"> Estudo e Relatório de Impacto Ambiental – (EIA/RIMA)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Levantamento de Aspectos e Impactos Ambientais (LAIA)"> Levantamento de Aspectos e Impactos Ambientais (LAIA)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Gerenciamento de Resíduos Sólidos - PGRS"> Plano de Gerenciamento de Resíduos Sólidos - PGRS<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Controle Ambiental (PCA)"> Plano de Controle Ambiental (PCA)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Programa de Política Ambiental"> Programa de Política Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Relatório de Atividades Potencialmente Poluidoras (RAPP)"> Relatório de Atividades Potencialmente Poluidoras (RAPP)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Relatório de Controle Ambiental (RCA)"> Relatório de Controle Ambiental (RCA)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Inventário Florestal"> Inventário Florestal<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Inventário de Fauna Silvestre"> Inventário de Fauna Silvestre<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Resgate de Fauna Silvestre"> Plano de Resgate de Fauna Silvestre<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Resgate e Afugentamento de Fauna Silvestre"> Resgate e Afugentamento de Fauna Silvestre<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Recuperação de Áreas Degradadas - PRAD"> Plano de Recuperação de Áreas Degradadas - PRAD<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Atendimento a Emergência - PAE"> Plano de Atendimento a Emergência - PAE<br>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Licenciamento e Autorizações Ambientais</legend>
+                                <input type="checkbox" name="tipo_servico[]" value="Declaração de Inexigibilidade"> Declaração de Inexigibilidade<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Licenciamento Ambiental (Municipal, Estadual e Federal)"> Licenciamento Ambiental (Municipal, Estadual e Federal)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Licença Ambiental Simplificada – LAS"> Licença Ambiental Simplificada – LAS<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Licença Prévia, Instalação e Operação"> Licença Prévia, Instalação e Operação<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Autorização Ambiental"> Autorização Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Regularização Ambiental de Empreendimentos"> Regularização Ambiental de Empreendimentos<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Regularização Ambiental de Pequenas Propriedades"> Regularização Ambiental de Pequenas Propriedades<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Dispensa de Licenciamento"> Dispensa de Licenciamento<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Cadastro Técnico Federal"> Cadastro Técnico Federal<br>
+                                <input type="checkbox" name="tipo_servico[]" value="CADRI - Certificado de Movimentação de Resíduos de Interesse Ambiental"> CADRI - Certificado de Movimentação de Resíduos de Interesse Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="CETESB - Companhia Ambiental do Estado de São Paulo"> CETESB - Companhia Ambiental do Estado de São Paulo<br>
+                                <input type="checkbox" name="tipo_servico[]" value="ICMBIO - Instituto Chico Mendes de Conservação da Biodiversidade"> ICMBIO - Instituto Chico Mendes de Conservação da Biodiversidade<br>
+                                <input type="checkbox" name="tipo_servico[]" value="TCA - Termo de Compromisso Ambiental"> TCA - Termo de Compromisso Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Documentos e Laudos de Menor Impacto"> Documentos e Laudos de Menor Impacto<br>
+                                <input type="checkbox" name="tipo_servico[]" value="CAR (Cadastro Ambiental Rural)"> CAR (Cadastro Ambiental Rural)<br>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Gestão Ambiental</legend>
+                                <input type="checkbox" name="tipo_servico[]" value="Plano de Gestão Ambiental – PGA"> Plano de Gestão Ambiental – PGA<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Compensação Ambiental"> Compensação Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Gestão Ambiental"> Gestão Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Monitoramento Ambiental"> Monitoramento Ambiental<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Programa de Monitoramento de Fauna Silvestre - PMFS"> Programa de Monitoramento de Fauna Silvestre - PMFS<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Programa de Afugentamento, Resgate e Destinação de Fauna Silvestre - PSRDS"> Programa de Afugentamento, Resgate e Destinação de Fauna Silvestre - PSRDS<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Recuperação de Áreas Degradadas"> Recuperação de Áreas Degradadas<br>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Outros Serviços</legend>
+                                <input type="checkbox" name="tipo_servico[]" value="Geoprocessamento"> Geoprocessamento<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Supressão Vegetal"> Supressão Vegetal<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Acompanhamento de Supressão Vegetal"> Acompanhamento de Supressão Vegetal<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Intervenção em APP (Área de Preservação Permanente)"> Intervenção em APP (Área de Preservação Permanente)<br>
+                                <input type="checkbox" name="tipo_servico[]" value="Plantio de mudas"> Plantio de mudas<br>
+                            </fieldset>
+                        </div>
                     </div>
                     <br><br>
                     <div class="inputBox">
