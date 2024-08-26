@@ -113,9 +113,10 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                     <br><br>
 
                     <div class="inputBox">
-                        <label for="tipo_servico" class="labelInput">Tipo de Serviço</label>
                         <div id="tipo_servico" class="inputUser">
                             <fieldset>
+                                <h3><b>Selecione os Serviços Desejados:</b></h3>
+                                <br>
                                 <h3>Projetos, Laudos e Estudos Ambientais</h3>
                                 <input type="checkbox" name="tipo_servico[]" value="Assessoria e Consultoria Ambiental"> Assessoria e Consultoria Ambiental<br>
                                 <input type="checkbox" name="tipo_servico[]" value="Desenvolvimento de Diagnóstico Socioambiental"> Desenvolvimento de Diagnóstico Socioambiental<br>
@@ -175,7 +176,7 @@ function enviarEmail($nome, $email, $telefone, $descricao_servicos, $tipo_servic
                     <br><br>
                     <div class="inputBox">
                         <textarea name="mensagem" id="mensagem" class="inputUser" rows="4"></textarea>
-                        <label for="mensagem" class="labelInput">Adicione uma observação ou deixa uma mensagem:</label>
+                        <label for="mensagem" class="labelInput">Adicione uma observação ou deixe uma mensagem:</label>
                     </div>
                     <br><br>
                     <input type="submit" name="submit" id="submit" value="Enviar">
